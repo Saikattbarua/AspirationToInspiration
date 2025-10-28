@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Moveste Clothings - Aspiration To Inspiration</title>
+    <link rel="stylesheet" href="../assets/colors.css">
+    <style>
+        .header {
+            background-color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .category-card {
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .featured-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .product-card {
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 250px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        
+        .btn-shop {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn-shop:hover {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+        }
+        
+        .collection-banner {
+            background-color: var(--light-gray);
+            padding: 40px 20px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="homepage.html" class="link-primary">Home</a></li>
+                <li style="margin: 0 15px;"><a href="#" class="link-primary">Moveste Clothings</a></li>
+                <li style="margin: 0 15px;"><a href="radial-velocity.html" class="link-primary">Radial Velocity</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-ngo.html" class="link-primary">Moveste NGO</a></li>
+                <li style="margin: 0 15px;"><a href="blog.html" class="link-primary">Blog</a></li>
+                <li style="margin: 0 15px;"><a href="about.html" class="link-primary">About Us</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html" class="link-primary">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="contact.html" class="btn-primary-blue">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Moveste Clothings Collection</h1>
+        <p style="max-width: 800px; margin: 0 auto 20px;">Premium fashion and lifestyle products that inspire confidence and style.</p>
+        <a href="https://www.movestestore.com" target="_blank" class="btn-primary-blue">Shop Our Complete Collection</a>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Shop by Category</h2>
+        
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://placehold.co/250x200/4a6fa5/white?text=Men's+Fashion" alt="Men's Fashion" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="category-info">
+                    <h3>Men's Collection</h3>
+                    <p>Stylish and comfortable clothing for the modern man.</p>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://placehold.co/250x200/4a6fa5/white?text=Women's+Fashion" alt="Women's Fashion" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="category-info">
+                    <h3>Women's Collection</h3>
+                    <p>Elegant and empowering fashion for every woman.</p>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://placehold.co/250x200/4a6fa5/white?text=Accessories" alt="Accessories" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="category-info">
+                    <h3>Accessories</h3>
+                    <p>Complete your look with our premium accessories.</p>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://placehold.co/250x200/4a6fa5/white?text=Seasonal" alt="Seasonal Collection" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="category-info">
+                    <h3>Seasonal Collection</h3>
+                    <p>Special collections designed for every season.</p>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection Banner -->
+    <section class="section">
+        <div class="collection-banner">
+            <h2>Summer Essentials Collection</h2>
+            <p>Light, breathable fabrics perfect for the warmer months. Limited time offer - 20% off all summer items!</p>
+            <a href="https://www.movestestore.com" target="_blank" class="btn-primary-blue" style="margin-top: 20px;">Shop Summer Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Featured Products</h2>
+        
+        <div class="featured-products">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/250x250/1a3a6c/white?text=Premium+Blazer" alt="Premium Blazer" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Blazer</h3>
+                    <p>Classic design with modern fit for any occasion.</p>
+                    <div class="product-price">$89.99</div>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-shop">View Details</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/250x250/1a3a6c/white?text=Elegant+Dress" alt="Elegant Dress" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="product-info">
+                    <h3>Elegant Dress</h3>
+                    <p>Timeless elegance for special moments.</p>
+                    <div class="product-price">$69.99</div>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-shop">View Details</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/250x250/1a3a6c/white?text=Designer+Jeans" alt="Designer Jeans" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="product-info">
+                    <h3>Designer Jeans</h3>
+                    <p>Perfect fit and premium comfort for everyday wear.</p>
+                    <div class="product-price">$59.99</div>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-shop">View Details</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/250x250/1a3a6c/white?text=Summer+T-Shirt" alt="Summer T-Shirt" style="max-width: 100%; max-height: 100%;">
+                </div>
+                <div class="product-info">
+                    <h3>Summer T-Shirt</h3>
+                    <p>Breathable cotton for hot summer days.</p>
+                    <div class="product-price">$24.99</div>
+                    <a href="https://www.movestestore.com" target="_blank" class="btn-shop">View Details</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://www.movestestore.com" target="_blank" class="btn-primary-blue">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Sustainability Message -->
+    <section class="section" style="background-color: var(--light-blue); text-align: center;">
+        <h2>Conscious Fashion</h2>
+        <p style="max-width: 800px; margin: 0 auto 20px;">We're committed to sustainable practices in all our collections. Our eco-friendly materials and ethical manufacturing processes ensure you look good while doing good.</p>
+        <a href="#" class="btn-outline-blue">Learn About Our Sustainability</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 50px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+                <a href="homepage.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Home</a>
+                <a href="about.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">About Us</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Terms of Service</a>
+                <a href="faq.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">FAQ</a>
+                <a href="contact.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Contact</a>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">f</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">t</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">in</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">ig</a>
+            </div>
+            <p>Contact Us: info@aspirationtoinspiration.com | +8801894567180</p>
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

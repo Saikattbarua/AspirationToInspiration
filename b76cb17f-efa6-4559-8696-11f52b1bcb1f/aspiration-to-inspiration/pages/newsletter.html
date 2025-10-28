@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup - Aspiration To Inspiration</title>
+    <link rel="stylesheet" href="../assets/colors.css">
+    <style>
+        .header {
+            background-color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--light-blue);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .signup-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            font-weight: normal;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .btn-subscribe {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-subscribe:hover {
+            background-color: var(--secondary-blue);
+        }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="homepage.html" class="link-primary">Home</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-clothings.html" class="link-primary">Moveste Clothings</a></li>
+                <li style="margin: 0 15px;"><a href="radial-velocity.html" class="link-primary">Radial Velocity</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-ngo.html" class="link-primary">Moveste NGO</a></li>
+                <li style="margin: 0 15px;"><a href="blog.html" class="link-primary">Blog</a></li>
+                <li style="margin: 0 15px;"><a href="about.html" class="link-primary">About Us</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html" class="link-primary">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="contact.html" class="btn-primary-blue">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Join Our Inspiration Community</h1>
+        <p style="max-width: 800px; margin: 0 auto 20px;">Subscribe to our newsletter for the latest updates, exclusive offers, and inspiring stories from all our divisions.</p>
+    </section>
+
+    <!-- Newsletter Content -->
+    <section class="section">
+        <div class="newsletter-container">
+            <h2>Stay Connected</h2>
+            <p>Be the first to know about new collections, digital innovations, and social impact initiatives. Our newsletter is your direct connection to the Aspiration To Inspiration community.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📰</div>
+                    <h3>Exclusive Updates</h3>
+                    <p>Get insider access to product launches, service enhancements, and community projects before anyone else.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎁</div>
+                    <h3>Special Offers</h3>
+                    <p>Receive exclusive discounts and promotions on Moveste clothing and Radial Velocity services.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Inspiring Stories</h3>
+                    <p>Read impactful stories from our NGO initiatives and learn how your support creates positive change.</p>
+                </div>
+            </div>
+            
+            <div class="signup-form">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Fill out the form below to join our community</p>
+                
+                <form id="newsletterForm" style="margin-top: 20px;">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="divisionInterest">Primary Interest</label>
+                        <select id="divisionInterest" name="divisionInterest">
+                            <option value="">Select your primary interest</option>
+                            <option value="fashion">Moveste Clothings (Fashion & Lifestyle)</option>
+                            <option value="digital">Radial Velocity (Digital Services)</option>
+                            <option value="social">Moveste NGO (Social Impact)</option>
+                            <option value="all">All Divisions</option>
+                        </select>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="contentTypes" value="news">
+                            <span>I'd like to receive news and updates</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="contentTypes" value="offers">
+                            <span>I'd like to receive special offers and promotions</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="contentTypes" value="impact">
+                            <span>I'd like to receive social impact stories</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="privacy" value="accepted" required>
+                            <span>I agree to the Privacy Policy and consent to receive emails from Aspiration To Inspiration *</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-subscribe">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 30px;">What Subscribers Say</h2>
+        <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div style="background-color: var(--light-blue); padding: 20px; border-radius: 8px;">
+                <p>"The Aspiration To Inspiration newsletter is the highlight of my inbox every week. The content is inspiring and the exclusive offers are always welcome."</p>
+                <p><strong>- Jennifer M.</strong></p>
+            </div>
+            <div style="background-color: var(--light-blue); padding: 20px; border-radius: 8px;">
+                <p>"I love how the newsletter connects all three divisions of the brand. It's fascinating to see how fashion, technology, and social impact intersect."</p>
+                <p><strong>- Robert K.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 50px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+                <a href="homepage.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Home</a>
+                <a href="about.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">About Us</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">Terms of Service</a>
+                <a href="faq.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">FAQ</a>
+                <a href="contact.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Contact</a>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">f</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">t</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">in</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">ig</a>
+            </div>
+            <p>Contact Us: info@aspirationtoinspiration.com | +8801894567180</p>
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

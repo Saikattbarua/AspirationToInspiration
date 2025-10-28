@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Aspiration To Inspiration</title>
+    <link rel="stylesheet" href="../assets/colors.css">
+    <style>
+        .header {
+            background-color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .mission-card, .vision-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light-blue);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .mission-card h2, .vision-card h2 {
+            color: var(--primary-blue);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .values-container {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .value-icon {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-right: 20px;
+            min-width: 50px;
+        }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="homepage.html" class="link-primary">Home</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-clothings.html" class="link-primary">Moveste Clothings</a></li>
+                <li style="margin: 0 15px;"><a href="radial-velocity.html" class="link-primary">Radial Velocity</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-ngo.html" class="link-primary">Moveste NGO</a></li>
+                <li style="margin: 0 15px;"><a href="blog.html" class="link-primary">Blog</a></li>
+                <li style="margin: 0 15px;"><a href="#" class="link-primary">About Us</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html" class="link-primary">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="contact.html" class="btn-primary-blue">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About Aspiration To Inspiration</h1>
+        <p style="max-width: 800px; margin: 0 auto 20px;">Transforming aspirations into inspirations through fashion, digital innovation, and social impact.</p>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2>Our Story</h2>
+            <p style="margin-bottom: 30px;">Founded in 2015, Aspiration To Inspiration began as a vision to create positive change across multiple dimensions of society. What started as a single clothing line has evolved into a comprehensive brand encompassing retail fashion, digital services, and social impact initiatives.</p>
+            
+            <p style="margin-bottom: 30px;">Our journey has been driven by a commitment to excellence, innovation, and social responsibility. Each division of our brand reflects our core values while addressing distinct needs in fashion, technology, and community development.</p>
+            
+            <p>Today, we proudly serve customers worldwide through our retail and digital services while making a meaningful difference in communities through our NGO initiatives.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section" style="background-color: var(--light-gray);">
+        <h2 style="text-align: center; margin-bottom: 40px;">Mission & Vision</h2>
+        
+        <div class="mission-vision">
+            <div class="mission-card">
+                <h2>Our Mission</h2>
+                <p>To inspire individuals and communities by providing exceptional fashion, innovative digital solutions, and meaningful social impact initiatives that empower people to transform their aspirations into reality.</p>
+            </div>
+            
+            <div class="vision-card">
+                <h2>Our Vision</h2>
+                <p>To become a globally recognized brand that seamlessly integrates commercial success with social responsibility, creating sustainable value for customers, communities, and stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Core Values</h2>
+        
+        <div class="values-container">
+            <div class="value-item">
+                <div class="value-icon">⭐</div>
+                <div>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest quality in everything we do, from product design to service delivery and social impact initiatives.</p>
+                </div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-icon">🤝</div>
+                <div>
+                    <h3>Integrity</h3>
+                    <p>We conduct business with honesty, transparency, and ethical practices, building trust with our customers, partners, and communities.</p>
+                </div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-icon">🔄</div>
+                <div>
+                    <h3>Innovation</h3>
+                    <p>We continuously seek new ideas and approaches to stay ahead in fashion trends, digital technologies, and social development solutions.</p>
+                </div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-icon">🌱</div>
+                <div>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to environmentally responsible practices and sustainable development in all our operations and initiatives.</p>
+                </div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-icon">❤️</div>
+                <div>
+                    <h3>Community</h3>
+                    <p>We believe in the power of community and strive to create positive impact through meaningful engagement and support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Divisions -->
+    <section class="section" style="background-color: var(--light-blue);">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Divisions</h2>
+        
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px;">
+                <div style="flex: 1; min-width: 250px; background-color: var(--white); padding: 20px; border-radius: 8px; text-align: center;">
+                    <img src="https://ik.imagekit.io/tvssccugg/e93ad3ce-149c-4ca0-b4c4-7428478c8a7a.jpeg?updatedAt=1761320898507" alt="Moveste Clothings" style="max-height: 80px; margin-bottom: 20px;">
+                    <h3>Moveste Clothings</h3>
+                    <p>Premium fashion and lifestyle products that inspire confidence and style through sustainable and ethical practices.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px; background-color: var(--white); padding: 20px; border-radius: 8px; text-align: center;">
+                    <img src="https://ik.imagekit.io/tvssccugg/8d96df2d-c7bb-4b19-82d5-dd313dd42a1e.jpeg?updatedAt=1761320912607" alt="Radial Velocity" style="max-height: 80px; margin-bottom: 20px;">
+                    <h3>Radial Velocity</h3>
+                    <p>Digital marketing and business solutions that accelerate growth and transform businesses through innovative technologies.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px; background-color: var(--white); padding: 20px; border-radius: 8px; text-align: center;">
+                    <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Moveste NGO" style="max-height: 80px; margin-bottom: 20px;">
+                    <h3>Moveste NGO</h3>
+                    <p>Social impact initiatives focused on education, healthcare, and community development to create lasting positive change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 40px;">Leadership Team</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://placehold.co/150x150/4a6fa5/white?text=SM" alt="Sarah Mitchell" style="max-width: 100%; border-radius: 50%;">
+                </div>
+                <h3>Sarah Mitchell</h3>
+                <p>Founder & CEO</p>
+                <p>With over 15 years of experience in fashion and social entrepreneurship, Sarah leads our vision and strategic direction.</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://placehold.co/150x150/4a6fa5/white?text=DJ" alt="David Johnson" style="max-width: 100%; border-radius: 50%;">
+                </div>
+                <h3>David Johnson</h3>
+                <p>CTO & Radial Velocity Director</p>
+                <p>David drives our digital innovation strategy with expertise in technology and business transformation.</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://placehold.co/150x150/4a6fa5/white?text=EP" alt="Emma Patel" style="max-width: 100%; border-radius: 50%;">
+                </div>
+                <h3>Emma Patel</h3>
+                <p>CSR Director & NGO Lead</p>
+                <p>Emma oversees our social impact initiatives with a passion for community development and sustainable change.</p>
+            </div>
+            
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="https://placehold.co/150x150/4a6fa5/white?text=MW" alt="Michael Wong" style="max-width: 100%; border-radius: 50%;">
+                </div>
+                <h3>Michael Wong</h3>
+                <p>Creative Director</p>
+                <p>Michael leads our design philosophy across all divisions, ensuring our aesthetic reflects our brand values.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 50px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+                <a href="homepage.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Home</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">About Us</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">Terms of Service</a>
+                <a href="#" style="color: var(--white); margin: 0 15px; text-decoration: none;">FAQ</a>
+                <a href="contact.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Contact</a>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">f</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">t</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">in</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">ig</a>
+            </div>
+            <p>Contact Us: info@aspirationtoinspiration.com | +8801894567180</p>
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
