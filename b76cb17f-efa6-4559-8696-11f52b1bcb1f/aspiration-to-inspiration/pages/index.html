@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspiration To Inspiration - Transforming Dreams into Reality</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --accent-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --white: #ffffff;
+            --light-gray: #f8fafc;
+            --text-dark: #1e293b;
+            --gold: #fbbf24;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Cosmic Background */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(125deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .nebula {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: nebulaFloat 30s infinite ease-in-out;
+        }
+        
+        @keyframes nebulaFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(20px, 10px) scale(1.1); }
+            50% { transform: translate(-15px, 15px) scale(0.9); }
+            75% { transform: translate(10px, -10px) scale(1.05); }
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 5%;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .logo img {
+            max-height: 60px;
+            transition: transform 0.5s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav li {
+            margin: 0 12px;
+            position: relative;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 500;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--accent-blue), var(--primary-blue));
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            color: var(--white);
+            padding: 150px 5% 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 1.5s ease;
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ffffff 0%, var(--light-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titleGlow 4s infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            100% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.6); }
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 25s infinite linear;
+            filter: blur(1px);
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Button Styles */
+        .btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 0 10px;
+        }
+        
+        .btn-primary-blue {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+        }
+        
+        .btn-outline-blue {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, #d97706 100%);
+            color: var(--text-dark);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-primary-blue:hover {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+        }
+        
+        .btn-outline-blue:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover::after {
+            opacity: 1;
+            transform: rotate(45deg) translate(10%, 10%);
+        }
+        
+        .btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 100px 5%;
+            position: relative;
+        }
+        
+        .light-section {
+            background-color: var(--white);
+        }
+        
+        .dark-section {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            display: inline-block;
+            position: relative;
+        }
+        
+        .dark-section .section-title h2 {
+            color: var(--white);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--gold));
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            animation: linePulse 3s infinite;
+        }
+        
+        @keyframes linePulse {
+            0%, 100% { width: 100px; }
+            50% { width: 150px; }
+        }
+        
+        /* Divisions Grid */
+        .divisions-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .division-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .dark-section .division-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .division-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+            z-index: 2;
+        }
+        
+        .division-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .division-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .division-logo {
+            max-width: 120px;
+            margin: 0 auto 25px;
+            display: block;
+            transition: all 0.5s ease;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+        }
+        
+        .division-card:hover .division-logo {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .division-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .dark-section .division-card h3 {
+            color: var(--white);
+        }
+        
+        .division-card p {
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+        
+        .dark-section .division-card p {
+            color: var(--light-blue);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0f172a 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light-gray);
+            position: relative;
+        }
+        
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--light-blue);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.7;
+        }
+        
+        .testimonial-card p {
+            margin-bottom: 25px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: var(--accent-blue);
+            margin-right: 10px;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .newsletter p {
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 5px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            background: transparent;
+            color: var(--white);
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .newsletter-button {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-button:hover {
+            background: var(--light-blue);
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: var(--white);
+            padding: 80px 5% 30px;
+        }
+        
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo img {
+            max-height: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            margin-bottom: 25px;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-links h3::after, .footer-contact h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-blue);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .social-media {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            text-decoration: none;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 3s infinite;
+        }
+        
+        /* Floating Animation for Elements */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, -15px); }
+            100% { transform: translate(0, 0px); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 3rem;
+            }
+            
+            .divisions-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 5px 10px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+                margin: 5px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 15px;
+                padding: 0;
+                background: transparent;
+            }
+            
+            .newsletter-input {
+                border-radius: 50px;
+                margin-bottom: 15px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            
+            .newsletter-button {
+                border-radius: 50px;
+                padding: 15px;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 70px 5%;
+            }
+            
+            .division-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg" id="cosmicBg"></div>
+
+    <!-- Header with Navigation -->
+    <header id="mainHeader">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Moveste Clothings</a></li>
+                <li><a href="#">Radial Velocity</a></li>
+                <li><a href="#">Moveste NGO</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" class="btn btn-primary-blue">Contact <i class="fas fa-arrow-right"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-shapes" id="floatingShapes"></div>
+        <div class="hero-content">
+            <h1 class="floating">Transforming Aspirations Into Inspirations</h1>
+            <p>We bridge the gap between dreams and reality through fashion, digital innovation, and meaningful social impact. Join us in creating a better world where every aspiration finds its path to inspiration.</p>
+            <div>
+                <a href="https://www.movestestore.com" target="_blank" class="btn btn-primary-blue">Shop Now <i class="fas fa-shopping-bag"></i></a>
+                <a href="donate.html" class="btn btn-outline-blue">Donate <i class="fas fa-heart"></i></a>
+                <a href="services.html" class="btn btn-gold">Our Services <i class="fas fa-rocket"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divisions Overview -->
+    <section class="section light-section">
+        <div class="section-title">
+            <h2>Our Divisions</h2>
+            <p>Three pillars, one vision - to transform aspirations into inspirations</p>
+        </div>
+        <div class="divisions-grid">
+            <!-- Moveste Clothings -->
+            <div class="division-card floating">
+                <img src="https://ik.imagekit.io/tvssccugg/e93ad3ce-149c-4ca0-b4c4-7428478c8a7a.jpeg?updatedAt=1761320898507" alt="Moveste Clothings Logo" class="division-logo">
+                <h3>Moveste Clothings</h3>
+                <p>Discover our premium fashion and lifestyle collection designed to inspire confidence and express individuality. From casual wear to statement pieces, each item is crafted with attention to detail and sustainable practices.</p>
+                <a href="https://www.movestestore.com" target="_blank" class="btn btn-primary-blue">Shop Collection <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Radial Velocity -->
+            <div class="division-card floating">
+                <img src="https://ik.imagekit.io/tvssccugg/8d96df2d-c7bb-4b19-82d5-dd313dd42a1e.jpeg?updatedAt=1761320912607" alt="Radial Velocity Logo" class="division-logo">
+                <h3>Radial Velocity</h3>
+                <p>Accelerate your business growth with our comprehensive digital marketing solutions. We specialize in SEO, social media management, content creation, and data-driven strategies that deliver measurable results and sustainable growth.</p>
+                <a href="services.html" class="btn btn-primary-blue">Explore Services <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- Moveste NGO -->
+            <div class="division-card floating">
+                <img src="https://ik.imagekit.io/tvssccugg/cd3a2927-fe8d-4f6a-9fa2-d5d5274f3f8e.jpeg?updatedAt=1761324987830" alt="Moveste NGO Logo" class="division-logo">
+                <h3>Moveste NGO</h3>
+                <p>Creating lasting positive change through community development initiatives, education programs, and environmental conservation efforts. Join our mission to build a more equitable and sustainable future for all.</p>
+                <a href="moveste-ngo.html" class="btn btn-primary-blue">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-title">
+            <h2>Our Impact in Numbers</h2>
+            <p>Measuring success through tangible results and positive change</p>
+        </div>
+        <div class="stats-container">
+            <div class="stat-item floating">
+                <span class="stat-number" id="stat1">0</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat-item floating">
+                <span class="stat-number" id="stat2">0</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item floating">
+                <span class="stat-number" id="stat3">0</span>
+                <span class="stat-label">Communities Impacted</span>
+            </div>
+            <div class="stat-item floating">
+                <span class="stat-number" id="stat4">0</span>
+                <span class="stat-label">Years of Excellence</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="section-title">
+            <h2>What People Say</h2>
+            <p>Hear from those who have experienced our transformative services</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card floating">
+                <p>"The quality of Moveste clothing is exceptional. I've never felt more confident in my style! Their sustainable approach to fashion makes me feel good about my purchases."</p>
+                <p class="testimonial-author">Mr. Shoron</p>
+            </div>
+            <div class="testimonial-card floating">
+                <p>"Radial Velocity transformed our digital presence completely. Their innovative strategies increased our online engagement by 200% and boosted our sales significantly within just three months."</p>
+                <p class="testimonial-author">Saikat Barua</p>
+            </div>
+            <div class="testimonial-card floating">
+                <p>"Moveste NGO's community programs have made a real difference in our neighborhood. Their educational initiatives have empowered dozens of young people with skills for a better future."</p>
+                <p class="testimonial-author">Ohe Kabir, Community Leader</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Inspiration Community</h2>
+            <p>Subscribe to our newsletter for the latest updates, exclusive offers, inspiring stories, and insights on how we're making a difference together.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" class="newsletter-input" required>
+                <button type="submit" class="newsletter-button">Sign Up <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo">
+                </div>
+                <p>Transforming aspirations into inspirations through innovative fashion, cutting-edge digital solutions, and meaningful social impact initiatives.</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Moveste Clothings</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Radial Velocity</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Moveste NGO</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping & Returns</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@aspirationtoinspiration.com</p>
+                <p><i class="fab fa-whatsapp"></i> +8801894567180</p>
+                <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Create stars for cosmic background
+        function createStars() {
+            const cosmicBg = document.getElementById('cosmicBg');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random properties for each star
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 5 + 3;
+                
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${posX}%`;
+                star.style.top = `${posY}%`;
+                star.style.animationDelay = `${delay}s`;
+                star.style.animationDuration = `${duration}s`;
+                
+                cosmicBg.appendChild(star);
+            }
+            
+            // Create nebula effects
+            const nebulaCount = 4;
+            const colors = ['#3b82f6', '#8b5cf6', '#06b6d4', '#ec4899'];
+            
+            for (let i = 0; i < nebulaCount; i++) {
+                const nebula = document.createElement('div');
+                nebula.classList.add('nebula');
+                
+                const size = Math.random() * 400 + 200;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const color = colors[i % colors.length];
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 20 + 20;
+                
+                nebula.style.width = `${size}px`;
+                nebula.style.height = `${size}px`;
+                nebula.style.left = `${posX}%`;
+                nebula.style.top = `${posY}%`;
+                nebula.style.backgroundColor = color;
+                nebula.style.animationDelay = `${delay}s`;
+                nebula.style.animationDuration = `${duration}s`;
+                
+                cosmicBg.appendChild(nebula);
+            }
+        }
+        
+        // Create floating shapes for hero section
+        function createFloatingShapes() {
+            const floatingShapes = document.getElementById('floatingShapes');
+            const shapeCount = 15;
+            
+            for (let i = 0; i < shapeCount; i++) {
+                const shape = document.createElement('div');
+                shape.classList.add('shape');
+                
+                // Random properties for each shape
+                const size = Math.random() * 100 + 20;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100 + 100;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 20 + 20;
+                
+                shape.style.width = `${size}px`;
+                shape.style.height = `${size}px`;
+                shape.style.left = `${posX}%`;
+                shape.style.top = `${posY}%`;
+                shape.style.animationDelay = `${delay}s`;
+                shape.style.animationDuration = `${duration}s`;
+                
+                floatingShapes.appendChild(shape);
+            }
+        }
+        
+        // Animate statistics counter
+        function animateStats() {
+            const stat1 = document.getElementById('stat1');
+            const stat2 = document.getElementById('stat2');
+            const stat3 = document.getElementById('stat3');
+            const stat4 = document.getElementById('stat4');
+            
+            const targetValues = [5000, 150, 25, 3];
+            const duration = 2000; // 2 seconds
+            const frameDuration = 1000 / 60; // 60fps
+            const totalFrames = Math.round(duration / frameDuration);
+            
+            const counters = [stat1, stat2, stat3, stat4];
+            
+            counters.forEach((counter, index) => {
+                let frame = 0;
+                const countTo = targetValues[index];
+                
+                const counterInterval = setInterval(() => {
+                    frame++;
+                    const progress = frame / totalFrames;
+                    const currentCount = Math.round(countTo * progress);
+                    
+                    if (parseInt(counter.innerHTML) !== currentCount) {
+                        counter.innerHTML = currentCount;
+                    }
+                    
+                    if (frame === totalFrames) {
+                        clearInterval(counterInterval);
+                    }
+                }, frameDuration);
+            });
+        }
+        
+        // Header scroll effect
+        function handleHeaderScroll() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createStars();
+            createFloatingShapes();
+            
+            // Animate stats when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.querySelector('.stats-section'));
+            
+            // Add scroll event listener for header
+            window.addEventListener('scroll', handleHeaderScroll);
+        });
+    </script>
+</body>
+</html>

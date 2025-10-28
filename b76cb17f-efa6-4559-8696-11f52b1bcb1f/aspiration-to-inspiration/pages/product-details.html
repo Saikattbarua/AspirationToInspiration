@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Blazer - Moveste Clothings - Aspiration To Inspiration</title>
+    <link rel="stylesheet" href="../assets/colors.css">
+    <style>
+        .header {
+            background-color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background-color: var(--light-blue);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 10px 0;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+        
+        .product-gallery {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .product-image-main {
+            grid-column: span 2;
+            height: 400px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image-thumb {
+            height: 150px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .product-image-thumb.active {
+            border-color: var(--primary-blue);
+        }
+        
+        .product-details {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .product-title {
+            margin-top: 0;
+            color: var(--primary-blue);
+        }
+        
+        .product-price {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin: 20px 0;
+        }
+        
+        .product-description {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        
+        .product-meta {
+            margin: 20px 0;
+        }
+        
+        .meta-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .meta-label {
+            font-weight: 600;
+            width: 120px;
+            color: var(--dark-gray);
+        }
+        
+        .size-selector, .color-selector {
+            margin: 20px 0;
+        }
+        
+        .size-options, .color-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .size-option, .color-option {
+            padding: 10px 15px;
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .size-option:hover, .color-option:hover {
+            background-color: var(--light-blue);
+        }
+        
+        .size-option.selected, .color-option.selected {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-color: var(--primary-blue);
+        }
+        
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .quantity-btn {
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-blue);
+            border: 1px solid var(--accent-blue);
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .quantity-input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            border-top: 1px solid var(--accent-blue);
+            border-bottom: 1px solid var(--accent-blue);
+            font-size: 16px;
+        }
+        
+        .btn-add-to-cart {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .btn-add-to-cart:hover {
+            background-color: var(--secondary-blue);
+        }
+        
+        .btn-wishlist {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-wishlist:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .product-tabs {
+            margin-top: 40px;
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .tab-headers {
+            display: flex;
+            background-color: var(--light-blue);
+            border-bottom: 1px solid var(--accent-blue);
+        }
+        
+        .tab-header {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tab-header.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .tab-content {
+            padding: 25px;
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .related-products {
+            margin-top: 60px;
+        }
+        
+        .related-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .related-product-card {
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .related-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .related-product-image {
+            height: 150px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .related-product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .related-product-price {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin: 10px 0;
+        }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="homepage.html" class="link-primary">Home</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-clothings.html" class="link-primary">Moveste Clothings</a></li>
+                <li style="margin: 0 15px;"><a href="radial-velocity.html" class="link-primary">Radial Velocity</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-ngo.html" class="link-primary">Moveste NGO</a></li>
+                <li style="margin: 0 15px;"><a href="blog.html" class="link-primary">Blog</a></li>
+                <li style="margin: 0 15px;"><a href="about.html" class="link-primary">About Us</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html" class="link-primary">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="contact.html" class="btn-primary-blue">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Premium Blazer</h1>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <p><a href="homepage.html">Home</a> > <a href="moveste-clothings.html">Moveste Clothings</a> > <a href="product-categories.html">Categories</a> > Premium Blazer</p>
+    </div>
+
+    <!-- Product Content -->
+    <section class="section">
+        <div class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="product-images">
+                    <div class="product-image-main">
+                        <img src="https://placehold.co/400x400/1a3a6c/white?text=Premium+Blazer+Front" alt="Premium Blazer Front View" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="product-image-thumb active">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Front" alt="Front View" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="product-image-thumb">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Back" alt="Back View" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-title">Premium Blazer</h1>
+                
+                <div class="product-price">$89.99</div>
+                
+                <div class="product-description">
+                    <p>This premium blazer combines classic design with modern fit for any occasion. Crafted from high-quality fabric with attention to detail, it features a tailored silhouette, notched lapels, and a sophisticated two-button closure. Perfect for business meetings, formal events, or elevating your everyday style.</p>
+                </div>
+                
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">SKU:</span>
+                        <span>MB-2023-BLZ-001</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Availability:</span>
+                        <span>In Stock</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Category:</span>
+                        <span>Men's Formal Wear</span>
+                    </div>
+                </div>
+                
+                <div class="size-selector">
+                    <h3>Select Size</h3>
+                    <div class="size-options">
+                        <div class="size-option">S</div>
+                        <div class="size-option selected">M</div>
+                        <div class="size-option">L</div>
+                        <div class="size-option">XL</div>
+                        <div class="size-option">XXL</div>
+                    </div>
+                </div>
+                
+                <div class="color-selector">
+                    <h3>Select Color</h3>
+                    <div class="color-options">
+                        <div class="color-option selected" style="background-color: #1a3a6c; color: white;">Navy Blue</div>
+                        <div class="color-option" style="background-color: #333333; color: white;">Charcoal</div>
+                        <div class="color-option" style="background-color: #8B4513; color: white;">Brown</div>
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" class="quantity-input" value="1">
+                    <button class="quantity-btn">+</button>
+                </div>
+                
+                <button class="btn-add-to-cart">Add to Cart</button>
+                <button class="btn-wishlist">Add to Wishlist</button>
+                
+                <!-- Product Tabs -->
+                <div class="product-tabs">
+                    <div class="tab-headers">
+                        <div class="tab-header active">Description</div>
+                        <div class="tab-header">Specifications</div>
+                        <div class="tab-header">Reviews (3)</div>
+                    </div>
+                    
+                    <div class="tab-content active">
+                        <h3>Product Description</h3>
+                        <p>This premium blazer is designed for the modern professional who values both style and comfort. The blazer features a slim fit silhouette that flatters the figure while allowing for ease of movement. The high-quality fabric ensures durability and comfort throughout the day.</p>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li>Two-button closure with notch lapels</li>
+                            <li>Side vents for improved mobility</li>
+                            <li>Interior pockets for secure storage</li>
+                            <li>Adjustable cuff buttons</li>
+                            <li>Lined interior for smooth wearing</li>
+                        </ul>
+                        <p>Care instructions: Dry clean only. Store on a padded hanger to maintain shape.</p>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <h3>Specifications</h3>
+                        <div class="meta-item">
+                            <span class="meta-label">Material:</span>
+                            <span>100% Premium Wool Blend</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Lining:</span>
+                            <span>100% Polyester</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Fit:</span>
+                            <span>Slim Fit</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Closure:</span>
+                            <span>Two-button</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Pockets:</span>
+                            <span>Two side, one chest, two interior</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Vents:</span>
+                            <span>Side vents</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Care:</span>
+                            <span>Dry clean only</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <h3>Customer Reviews</h3>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--accent-blue);">
+                            <div style="color: #ffc107; margin-bottom: 10px;">
+                                ★★★★★
+                            </div>
+                            <h4>Perfect Fit and Quality</h4>
+                            <p>This blazer exceeded my expectations. The fit is perfect and the quality is exceptional. I've received numerous compliments at work.</p>
+                            <p><strong>- David K.</strong> | October 12, 2023</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--accent-blue);">
+                            <div style="color: #ffc107; margin-bottom: 10px;">
+                                ★★★★☆
+                            </div>
+                            <h4>Great Blazer, Runs Slightly Small</h4>
+                            <p>Beautiful blazer with excellent stitching and fabric quality. I would recommend sizing up if you're between sizes.</p>
+                            <p><strong>- Michael R.</strong> | September 28, 2023</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <div style="color: #ffc107; margin-bottom: 10px;">
+                                ★★★★★
+                            </div>
+                            <h4>Worth Every Penny</h4>
+                            <p>This is my third blazer from Moveste and it won't be my last. The quality and fit are consistently excellent.</p>
+                            <p><strong>- James T.</strong> | September 15, 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section">
+        <div class="related-products">
+            <h2>You May Also Like</h2>
+            
+            <div class="related-products-grid">
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Elegant+Dress" alt="Elegant Dress" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="related-product-info">
+                        <h4>Elegant Dress</h4>
+                        <div class="related-product-price">$69.99</div>
+                        <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Designer+Jeans" alt="Designer Jeans" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="related-product-info">
+                        <h4>Designer Jeans</h4>
+                        <div class="related-product-price">$59.99</div>
+                        <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Summer+T-Shirt" alt="Summer T-Shirt" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="related-product-info">
+                        <h4>Summer T-Shirt</h4>
+                        <div class="related-product-price">$24.99</div>
+                        <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <img src="https://placehold.co/150x150/1a3a6c/white?text=Formal+Shirt" alt="Formal Shirt" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="related-product-info">
+                        <h4>Formal Shirt</h4>
+                        <div class="related-product-price">$39.99</div>
+                        <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 50px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+                <a href="homepage.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Home</a>
+                <a href="about.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">About Us</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Terms of Service</a>
+                <a href="faq.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">FAQ</a>
+                <a href="contact.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Contact</a>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">f</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">t</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">in</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">ig</a>
+            </div>
+            <p>Contact Us: info@aspirationtoinspiration.com | +8801894567180</p>
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab functionality
+        document.querySelectorAll('.tab-header').forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-header').forEach(t => {
+                    t.classList.remove('active');
+                });
+                document.querySelectorAll('.tab-content').forEach(c => {
+                    c.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                document.querySelectorAll('.tab-content')[index].classList.add('active');
+            });
+        });
+        
+        // Size selector
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.size-option').forEach(o => {
+                    o.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            });
+        });
+        
+        // Color selector
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.color-option').forEach(o => {
+                    o.classList.remove('selected');
+                });
+                option.classList.add('selected');
+            });
+        });
+        
+        // Image thumbnail selector
+        document.querySelectorAll('.product-image-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                document.querySelectorAll('.product-image-thumb').forEach(t => {
+                    t.classList.remove('active');
+                });
+                thumb.classList.add('active');
+                
+                // In a real implementation, this would change the main image
+                // For this static version, we're just showing the UI interaction
+            });
+        });
+        
+        // Quantity selector
+        const quantityInput = document.querySelector('.quantity-input');
+        const minusBtn = document.querySelector('.quantity-btn:first-child');
+        const plusBtn = document.querySelector('.quantity-btn:last-child');
+        
+        minusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+            }
+        });
+        
+        plusBtn.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+        });
+    </script>
+</body>
+</html>

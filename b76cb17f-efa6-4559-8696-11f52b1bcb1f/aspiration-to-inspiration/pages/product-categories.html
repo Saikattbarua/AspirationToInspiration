@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories - Moveste Clothings - Aspiration To Inspiration</title>
+    <link rel="stylesheet" href="../assets/colors.css">
+    <style>
+        .header {
+            background-color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section {
+            padding: 40px 20px;
+        }
+        
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 10px 0;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+        }
+        
+        .sidebar-widget {
+            background-color: var(--light-blue);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-widget h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--accent-blue);
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary-blue);
+        }
+        
+        .filter-options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .filter-options li {
+            margin-bottom: 8px;
+        }
+        
+        .filter-options label {
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-options input {
+            margin-right: 10px;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-image {
+            height: 200px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-count {
+            color: var(--dark-gray);
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        
+        .btn-outline-blue {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .page-link {
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: var(--white);
+            border: 1px solid var(--accent-blue);
+            color: var(--primary-blue);
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .page-link:hover, .page-link.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 60px;">
+        </div>
+        <nav>
+            <ul style="list-style: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="homepage.html" class="link-primary">Home</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-clothings.html" class="link-primary">Moveste Clothings</a></li>
+                <li style="margin: 0 15px;"><a href="radial-velocity.html" class="link-primary">Radial Velocity</a></li>
+                <li style="margin: 0 15px;"><a href="moveste-ngo.html" class="link-primary">Moveste NGO</a></li>
+                <li style="margin: 0 15px;"><a href="blog.html" class="link-primary">Blog</a></li>
+                <li style="margin: 0 15px;"><a href="about.html" class="link-primary">About Us</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html" class="link-primary">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="contact.html" class="btn-primary-blue">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Product Categories</h1>
+        <p style="max-width: 800px; margin: 0 auto 20px;">Explore our wide range of premium fashion and lifestyle products.</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <p><a href="homepage.html">Home</a> > <a href="moveste-clothings.html">Moveste Clothings</a> > Categories</p>
+    </div>
+
+    <!-- Categories Content -->
+    <section class="section">
+        <div class="categories-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Filter by Category -->
+                <div class="sidebar-widget">
+                    <h3>Filter by Category</h3>
+                    <div class="filter-group">
+                        <h4>Women's Fashion</h4>
+                        <ul class="filter-options">
+                            <li><label><input type="checkbox" name="category" value="dresses"> Dresses (42)</label></li>
+                            <li><label><input type="checkbox" name="category" value="tops"> Tops (38)</label></li>
+                            <li><label><input type="checkbox" name="category" value="bottoms"> Bottoms (35)</label></li>
+                            <li><label><input type="checkbox" name="category" value="outerwear"> Outerwear (22)</label></li>
+                            <li><label><input type="checkbox" name="category" value="activewear"> Activewear (28)</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Men's Fashion</h4>
+                        <ul class="filter-options">
+                            <li><label><input type="checkbox" name="category" value="shirts"> Shirts (36)</label></li>
+                            <li><label><input type="checkbox" name="category" value="pants"> Pants (29)</label></li>
+                            <li><label><input type="checkbox" name="category" value="jackets"> Jackets (18)</label></li>
+                            <li><label><input type="checkbox" name="category" value="activewear"> Activewear (24)</label></li>
+                            <li><label><input type="checkbox" name="category" value="formal"> Formal Wear (15)</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Accessories</h4>
+                        <ul class="filter-options">
+                            <li><label><input type="checkbox" name="category" value="bags"> Bags (17)</label></li>
+                            <li><label><input type="checkbox" name="category" value="jewelry"> Jewelry (23)</label></li>
+                            <li><label><input type="checkbox" name="category" value="scarves"> Scarves (12)</label></li>
+                            <li><label><input type="checkbox" name="category" value="hats"> Hats (9)</label></li>
+                            <li><label><input type="checkbox" name="category" value="belts"> Belts (14)</label></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Filter by Price -->
+                <div class="sidebar-widget">
+                    <h3>Filter by Price</h3>
+                    <div class="filter-group">
+                        <ul class="filter-options">
+                            <li><label><input type="checkbox" name="price" value="0-25"> $0 - $25 (42)</label></li>
+                            <li><label><input type="checkbox" name="price" value="25-50"> $25 - $50 (68)</label></li>
+                            <li><label><input type="checkbox" name="price" value="50-100"> $50 - $100 (35)</label></li>
+                            <li><label><input type="checkbox" name="price" value="100+"> $100+ (12)</label></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Filter by Size -->
+                <div class="sidebar-widget">
+                    <h3>Filter by Size</h3>
+                    <div class="filter-group">
+                        <ul class="filter-options">
+                            <li><label><input type="checkbox" name="size" value="xs"> XS (24)</label></li>
+                            <li><label><input type="checkbox" name="size" value="s"> S (67)</label></li>
+                            <li><label><input type="checkbox" name="size" value="m"> M (82)</label></li>
+                            <li><label><input type="checkbox" name="size" value="l"> L (76)</label></li>
+                            <li><label><input type="checkbox" name="size" value="xl"> XL (54)</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <h2>All Categories</h2>
+                <p>Browse our complete collection organized by category</p>
+                
+                <div class="category-grid">
+                    <!-- Women's Dresses -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Women's+Dresses" alt="Women's Dresses" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Women's Dresses</h3>
+                            <div class="product-count">42 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Men's Shirts -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Men's+Shirts" alt="Men's Shirts" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Men's Shirts</h3>
+                            <div class="product-count">36 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Women's Tops -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Women's+Tops" alt="Women's Tops" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Women's Tops</h3>
+                            <div class="product-count">38 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Men's Pants -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Men's+Pants" alt="Men's Pants" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Men's Pants</h3>
+                            <div class="product-count">29 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Women's Activewear -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Women's+Activewear" alt="Women's Activewear" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Women's Activewear</h3>
+                            <div class="product-count">28 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Men's Jackets -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Men's+Jackets" alt="Men's Jackets" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Men's Jackets</h3>
+                            <div class="product-count">18 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Accessories -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Accessories" alt="Accessories" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Accessories</h3>
+                            <div class="product-count">75 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Seasonal Collection -->
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://placehold.co/250x200/4a6fa5/white?text=Seasonal+Collection" alt="Seasonal Collection" style="max-width: 100%; max-height: 100%;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Seasonal Collection</h3>
+                            <div class="product-count">33 products</div>
+                            <a href="https://www.movestestore.com" target="_blank" class="btn-outline-blue">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">Next →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <img src="https://ik.imagekit.io/tvssccugg/3e811382-7ad3-490a-a461-f709cc1c1bb4.jpeg?updatedAt=1761320725889" alt="Aspiration To Inspiration Logo" style="max-height: 50px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 20px 0;">
+                <a href="homepage.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Home</a>
+                <a href="about.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">About Us</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                <a href="legal.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Terms of Service</a>
+                <a href="faq.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">FAQ</a>
+                <a href="contact.html" style="color: var(--white); margin: 0 15px; text-decoration: none;">Contact</a>
+            </div>
+            <div style="margin: 20px 0;">
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">f</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">t</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">in</a>
+                <a href="#" style="color: var(--white); margin: 0 10px; text-decoration: none; font-size: 24px;">ig</a>
+            </div>
+            <p>Contact Us: info@aspirationtoinspiration.com | +8801894567180</p>
+            <p>&copy; 2023 Aspiration To Inspiration. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
